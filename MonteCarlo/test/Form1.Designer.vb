@@ -33,46 +33,49 @@ Partial Class Form1
         Me.lstTableName = New System.Windows.Forms.ListBox()
         Me.btnGetTable = New System.Windows.Forms.Button()
         Me.flexData = New C1.Win.C1FlexGrid.C1FlexGrid()
+        Me.btnCopy = New System.Windows.Forms.Button()
+        Me.lstEventLog = New System.Windows.Forms.ListBox()
+        Me.btnViewQueue = New System.Windows.Forms.Button()
         CType(Me.flexData, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtRand
         '
-        Me.txtRand.Location = New System.Drawing.Point(12, 12)
+        Me.txtRand.Location = New System.Drawing.Point(474, 14)
         Me.txtRand.Name = "txtRand"
-        Me.txtRand.Size = New System.Drawing.Size(261, 20)
+        Me.txtRand.Size = New System.Drawing.Size(167, 20)
         Me.txtRand.TabIndex = 0
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(279, 10)
+        Me.Button1.Location = New System.Drawing.Point(647, 12)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(58, 23)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "Rand"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(360, 10)
+        Me.Button2.Location = New System.Drawing.Point(711, 12)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(59, 23)
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "ExpRand"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(441, 10)
+        Me.Button3.Location = New System.Drawing.Point(776, 12)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.Size = New System.Drawing.Size(67, 23)
         Me.Button3.TabIndex = 3
         Me.Button3.Text = "NormRand"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'btnGetFilePath
         '
-        Me.btnGetFilePath.Location = New System.Drawing.Point(12, 38)
+        Me.btnGetFilePath.Location = New System.Drawing.Point(12, 12)
         Me.btnGetFilePath.Name = "btnGetFilePath"
         Me.btnGetFilePath.Size = New System.Drawing.Size(90, 23)
         Me.btnGetFilePath.TabIndex = 4
@@ -81,16 +84,16 @@ Partial Class Form1
         '
         'txtPath
         '
-        Me.txtPath.Location = New System.Drawing.Point(108, 40)
+        Me.txtPath.Location = New System.Drawing.Point(108, 14)
         Me.txtPath.Name = "txtPath"
-        Me.txtPath.Size = New System.Drawing.Size(303, 20)
+        Me.txtPath.Size = New System.Drawing.Size(287, 20)
         Me.txtPath.TabIndex = 5
         '
         'btnConnect
         '
-        Me.btnConnect.Location = New System.Drawing.Point(417, 38)
+        Me.btnConnect.Location = New System.Drawing.Point(401, 12)
         Me.btnConnect.Name = "btnConnect"
-        Me.btnConnect.Size = New System.Drawing.Size(99, 23)
+        Me.btnConnect.Size = New System.Drawing.Size(67, 23)
         Me.btnConnect.TabIndex = 6
         Me.btnConnect.Text = "Connect"
         Me.btnConnect.UseVisualStyleBackColor = True
@@ -98,14 +101,14 @@ Partial Class Form1
         'lstTableName
         '
         Me.lstTableName.FormattingEnabled = True
-        Me.lstTableName.Location = New System.Drawing.Point(12, 67)
+        Me.lstTableName.Location = New System.Drawing.Point(12, 70)
         Me.lstTableName.Name = "lstTableName"
-        Me.lstTableName.Size = New System.Drawing.Size(120, 95)
+        Me.lstTableName.Size = New System.Drawing.Size(120, 69)
         Me.lstTableName.TabIndex = 7
         '
         'btnGetTable
         '
-        Me.btnGetTable.Location = New System.Drawing.Point(13, 169)
+        Me.btnGetTable.Location = New System.Drawing.Point(11, 41)
         Me.btnGetTable.Name = "btnGetTable"
         Me.btnGetTable.Size = New System.Drawing.Size(119, 23)
         Me.btnGetTable.TabIndex = 8
@@ -115,17 +118,46 @@ Partial Class Form1
         'flexData
         '
         Me.flexData.ColumnInfo = "10,1,0,0,0,95,Columns:"
-        Me.flexData.Location = New System.Drawing.Point(138, 67)
+        Me.flexData.Location = New System.Drawing.Point(138, 41)
         Me.flexData.Name = "flexData"
         Me.flexData.Rows.DefaultSize = 19
-        Me.flexData.Size = New System.Drawing.Size(372, 125)
+        Me.flexData.Size = New System.Drawing.Size(705, 125)
         Me.flexData.TabIndex = 9
+        '
+        'btnCopy
+        '
+        Me.btnCopy.Location = New System.Drawing.Point(12, 143)
+        Me.btnCopy.Name = "btnCopy"
+        Me.btnCopy.Size = New System.Drawing.Size(119, 23)
+        Me.btnCopy.TabIndex = 10
+        Me.btnCopy.Text = "Copy"
+        Me.btnCopy.UseVisualStyleBackColor = True
+        '
+        'lstEventLog
+        '
+        Me.lstEventLog.FormattingEnabled = True
+        Me.lstEventLog.Location = New System.Drawing.Point(13, 199)
+        Me.lstEventLog.Name = "lstEventLog"
+        Me.lstEventLog.Size = New System.Drawing.Size(830, 238)
+        Me.lstEventLog.TabIndex = 11
+        '
+        'btnViewQueue
+        '
+        Me.btnViewQueue.Location = New System.Drawing.Point(13, 171)
+        Me.btnViewQueue.Name = "btnViewQueue"
+        Me.btnViewQueue.Size = New System.Drawing.Size(119, 23)
+        Me.btnViewQueue.TabIndex = 12
+        Me.btnViewQueue.Text = "View Queue"
+        Me.btnViewQueue.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(522, 262)
+        Me.ClientSize = New System.Drawing.Size(855, 443)
+        Me.Controls.Add(Me.btnViewQueue)
+        Me.Controls.Add(Me.lstEventLog)
+        Me.Controls.Add(Me.btnCopy)
         Me.Controls.Add(Me.flexData)
         Me.Controls.Add(Me.btnGetTable)
         Me.Controls.Add(Me.lstTableName)
@@ -154,5 +186,8 @@ Partial Class Form1
     Friend WithEvents lstTableName As System.Windows.Forms.ListBox
     Friend WithEvents btnGetTable As System.Windows.Forms.Button
     Friend WithEvents flexData As C1.Win.C1FlexGrid.C1FlexGrid
+    Friend WithEvents btnCopy As System.Windows.Forms.Button
+    Friend WithEvents lstEventLog As System.Windows.Forms.ListBox
+    Friend WithEvents btnViewQueue As System.Windows.Forms.Button
 
 End Class

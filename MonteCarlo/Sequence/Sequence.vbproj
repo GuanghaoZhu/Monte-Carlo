@@ -67,7 +67,6 @@
     <Compile Include="Component.vb" />
     <Compile Include="EventGenerator.vb" />
     <Compile Include="SimEvent.vb" />
-    <Compile Include="SimEventCollection.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

@@ -96,7 +96,7 @@ Public Class DBData
     End Property
 
     '对数据库执行用户传入的SQL语句。
-    Private ReadOnly Property Execute(ByVal query As String) As DataSet
+    Public ReadOnly Property Execute(ByVal query As String) As DataSet
         Get
             Me.conn.Open()
             Dim adapter As New OleDbDataAdapter(query, Me.conn)

@@ -124,6 +124,10 @@
       <Project>{212235CC-BB0A-4110-BADD-475EFE73892F}</Project>
       <Name>DataControl</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Sequence\Sequence.vbproj">
+      <Project>{9F37D2A1-0A29-42C9-8AF9-2B9D3C7B41FD}</Project>
+      <Name>Sequence</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

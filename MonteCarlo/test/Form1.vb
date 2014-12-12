@@ -1,7 +1,10 @@
 ﻿Imports DataControl
+Imports Sequence
 Public Class Form1
     Private rand As RandGenerator
     Private data As DBData
+
+#Region "RandTest"
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         rand = RandFactory.create(Distribution.Uniform)
         txtRand.Text = rand.GetNext().ToString
@@ -9,7 +12,7 @@ Public Class Form1
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        rand = RandFactory.create(Distribution.Exponential, 0.00001)
+        rand = RandFactory.create(Distribution.Exponential, 0.01)
         txtRand.Text = rand.GetNext().ToString
 
     End Sub
@@ -20,6 +23,8 @@ Public Class Form1
 
 
     End Sub
+
+#End Region
 
     Private Sub btnGetFilePath_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGetFilePath.Click
         With dlgOpenFile
@@ -62,10 +67,30 @@ Public Class Form1
             Next
         Next
 
-        
-        My.Computer.Clipboard.
+
+
 
     End Sub
 
-    
+
+    Private Sub btnCopy_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCopy.Click
+        My.Computer.Clipboard.SetDataObject(New DataObject(data))
+
+    End Sub
+
+    Private Sub btnViewQueue_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnViewQueue.Click
+        '1.建立一个EventGenerator，赋予其数据库对象DBData，以及仿真时间
+        '2.调用该EventGenerator的GenerateQueue方法。生成事件队列Arraylist
+
+        Dim queueGen As New EventGenerator(CDbl(txtRand.Text), data)
+        Dim queue As New ArrayList
+
+        lstEventLog.Items.Clear()
+        queue = queueGen.GenerateQueue()
+
+        For Each i As SimEvent In queue
+            lstEventLog.Items.Add(i.ToString)
+        Next
+
+    End Sub
 End Class
