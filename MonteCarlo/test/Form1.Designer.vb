@@ -36,19 +36,20 @@ Partial Class Form1
         Me.btnCopy = New System.Windows.Forms.Button()
         Me.lstEventLog = New System.Windows.Forms.ListBox()
         Me.btnViewQueue = New System.Windows.Forms.Button()
+        Me.btnSerial = New System.Windows.Forms.Button()
         CType(Me.flexData, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtRand
         '
-        Me.txtRand.Location = New System.Drawing.Point(474, 14)
+        Me.txtRand.Location = New System.Drawing.Point(136, 43)
         Me.txtRand.Name = "txtRand"
-        Me.txtRand.Size = New System.Drawing.Size(167, 20)
+        Me.txtRand.Size = New System.Drawing.Size(176, 20)
         Me.txtRand.TabIndex = 0
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(647, 12)
+        Me.Button1.Location = New System.Drawing.Point(318, 41)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(58, 23)
         Me.Button1.TabIndex = 1
@@ -57,7 +58,7 @@ Partial Class Form1
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(711, 12)
+        Me.Button2.Location = New System.Drawing.Point(382, 41)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(59, 23)
         Me.Button2.TabIndex = 2
@@ -66,7 +67,7 @@ Partial Class Form1
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(776, 12)
+        Me.Button3.Location = New System.Drawing.Point(447, 41)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(67, 23)
         Me.Button3.TabIndex = 3
@@ -93,7 +94,7 @@ Partial Class Form1
         '
         Me.btnConnect.Location = New System.Drawing.Point(401, 12)
         Me.btnConnect.Name = "btnConnect"
-        Me.btnConnect.Size = New System.Drawing.Size(67, 23)
+        Me.btnConnect.Size = New System.Drawing.Size(113, 23)
         Me.btnConnect.TabIndex = 6
         Me.btnConnect.Text = "Connect"
         Me.btnConnect.UseVisualStyleBackColor = True
@@ -118,10 +119,10 @@ Partial Class Form1
         'flexData
         '
         Me.flexData.ColumnInfo = "10,1,0,0,0,95,Columns:"
-        Me.flexData.Location = New System.Drawing.Point(138, 41)
+        Me.flexData.Location = New System.Drawing.Point(136, 68)
         Me.flexData.Name = "flexData"
         Me.flexData.Rows.DefaultSize = 19
-        Me.flexData.Size = New System.Drawing.Size(705, 125)
+        Me.flexData.Size = New System.Drawing.Size(378, 125)
         Me.flexData.TabIndex = 9
         '
         'btnCopy
@@ -138,7 +139,7 @@ Partial Class Form1
         Me.lstEventLog.FormattingEnabled = True
         Me.lstEventLog.Location = New System.Drawing.Point(13, 199)
         Me.lstEventLog.Name = "lstEventLog"
-        Me.lstEventLog.Size = New System.Drawing.Size(830, 238)
+        Me.lstEventLog.Size = New System.Drawing.Size(503, 238)
         Me.lstEventLog.TabIndex = 11
         '
         'btnViewQueue
@@ -150,11 +151,21 @@ Partial Class Form1
         Me.btnViewQueue.Text = "View Queue"
         Me.btnViewQueue.UseVisualStyleBackColor = True
         '
+        'btnSerial
+        '
+        Me.btnSerial.Location = New System.Drawing.Point(530, 12)
+        Me.btnSerial.Name = "btnSerial"
+        Me.btnSerial.Size = New System.Drawing.Size(75, 23)
+        Me.btnSerial.TabIndex = 13
+        Me.btnSerial.Text = "Serialization"
+        Me.btnSerial.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(855, 443)
+        Me.Controls.Add(Me.btnSerial)
         Me.Controls.Add(Me.btnViewQueue)
         Me.Controls.Add(Me.lstEventLog)
         Me.Controls.Add(Me.btnCopy)
@@ -189,5 +200,6 @@ Partial Class Form1
     Friend WithEvents btnCopy As System.Windows.Forms.Button
     Friend WithEvents lstEventLog As System.Windows.Forms.ListBox
     Friend WithEvents btnViewQueue As System.Windows.Forms.Button
+    Friend WithEvents btnSerial As System.Windows.Forms.Button
 
 End Class

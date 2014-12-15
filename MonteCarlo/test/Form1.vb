@@ -93,4 +93,13 @@ Public Class Form1
         Next
 
     End Sub
+
+    Private Sub btnSerial_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSerial.Click
+        Dim x As New Logic.LogicStructure(txtPath.Text)
+
+        MessageBox.Show("S Done")
+
+
+        
+    End Sub
 End Class
